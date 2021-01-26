@@ -10,4 +10,12 @@ For JS, Jest is used to test whether proposed solutions pass the test cases. Tes
 
 ## Python
 
+Create and activate venv if desired:
+
+```bash
+cd python
+python3 -m venv ./venv
+source venv/bin/activate
+```
+
 Simply run ```python <path-to-algo-file>```.
