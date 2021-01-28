@@ -1,8 +1,14 @@
+
+# Based on "Data Structure: Stacks and Queues" by HackerRank on YouTube
+# https://www.youtube.com/watch?v=wjI1WNcIntg
+
 class Stack():
 
     size = 0
+    top = None
 
     def push(self, item):
+        self.top = item
         self.items[self.size] = item
         self.size += 1
         return self
@@ -12,15 +18,15 @@ class Stack():
             return
         self.items.pop(self.size - 1)
         self.size -= 1
+        if self.size == 0:
+            self.top = None
         return self
 
     def peek(self):
-        if self.size == 0:
-            return self.items[self.size]
-        return self.items[self.size - 1]
+        return self.top
 
     def is_empty(self):
-        if self.items.__len__() == 0:
+        if self.size == 0:
             return True
         return False
 
