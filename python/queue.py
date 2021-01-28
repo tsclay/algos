@@ -1,5 +1,3 @@
-import json
-
 # Based on "Data Structure: Stacks and Queues" by HackerRank on YouTube
 # https://www.youtube.com/watch?v=wjI1WNcIntg
 
@@ -49,13 +47,13 @@ class Queue():
         self.items = {}
 
 
-def pretty(d, indent=0):
-    for key, value in d.items():
-        print('\t' * indent + str(key))
-        if isinstance(value, dict):
-            pretty(value, indent+1)
-        else:
-            print('\t' * (indent+1) + str(value))
+# def pretty(d, indent=0):
+#     for key, value in d.items():
+#         print('\t' * indent + str(key))
+#         if isinstance(value, dict):
+#             pretty(value, indent+1)
+#         else:
+#             print('\t' * (indent+1) + str(value))
 
 
 test = Queue()
