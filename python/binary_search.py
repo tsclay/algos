@@ -20,7 +20,7 @@ def binary_search(list, target: int):
             return midpoint
 
         if target >= list[midpoint]:
-            left = floor(len(list) / 2)
+            left = midpoint
 
             while list[left] < target:
                 left += 1
@@ -29,7 +29,7 @@ def binary_search(list, target: int):
                 return left
 
         elif target <= list[midpoint]:
-            right = floor(len(list) / 2)
+            right = midpoint
 
             while list[right] > target:
                 right -= 1
@@ -45,5 +45,6 @@ sample_list = [1, 3, 4, 5, 6, 8, 9]
 
 print(binary_search(sample_list, 6))  # 4
 print(binary_search(sample_list, 3))  # 1
+print(binary_search(sample_list, 5))  # 3
 print(binary_search(sample_list, 9))  # 6
 print(binary_search(sample_list, 10))  # -1
