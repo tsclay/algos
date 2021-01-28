@@ -1,4 +1,3 @@
-from math import floor
 # Assume list is sorted and only contains numbers
 # Assume that target can be not found in list
 
@@ -10,6 +9,7 @@ def binary_search(list, target: int):
     left = 0
     right = len(list) - 1
 
+    # Check if target happens to be max, min, or mid value already
     if target == list[left]:
         return left
     if target == list[right]:
@@ -17,6 +17,7 @@ def binary_search(list, target: int):
     if target == list[midpoint]:
         return midpoint
 
+    # Check if target is larger than the max or smaller than the min
     if target > list[right] or target < list[left]:
         return -1
 
@@ -32,23 +33,8 @@ def binary_search(list, target: int):
         else:
             return midpoint
 
-    # if target > list[midpoint]:
-    #     left = midpoint
-
-    #     while list[left] < target:
-    #         left += 1
-
-    #     if list[left] == target:
-    #         return left
-
-    # elif target < list[midpoint]:
-    #     right = midpoint
-
-    #     while list[right] > target:
-    #         right -= 1
-
-    #     if list[right] == target:
-    #         return right
+    # Target falls within min-max, but is not found
+    return -1
 
 
 sample_list = [1, 3, 4, 5, 6, 8, 9]
