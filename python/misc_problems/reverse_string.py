@@ -1,13 +1,21 @@
-# Reverse a string
+"""
+Reverse a string
+
+- Take a string as input and output its reverse
+- Can only access the length property of string
+
+"""
 
 # Using special Python slicing syntax, includes all characters
-def ez_reverse(string: str) -> str:
+
+
+def ez_reverse_string(string: str) -> str:
     return string[::-1]
+
 
 # Longer solution using pointers
 
-
-def reverse(string: str) -> str:
+def reverse_string(string: str) -> str:
     left = 0
     right = len(string) - 1
     str_list = list(string)
